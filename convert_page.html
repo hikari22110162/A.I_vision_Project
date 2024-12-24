@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ads.css">
+    <script src="fucntion.js" defer></script>
+    <title>Image Enhancer</title>
+</head>
+<body>
+<div class="sidebar">
+    <h3>Menu</h3>
+    <ul>
+        <li><a href="#upload">Upload Image</a></li>
+        <li><a href="#canvas">Edit Image</a></li>
+        <li><a href="#slideshow">Slideshow</a></li>
+    </ul>
+</div>
+<div class="main-content">
+<h2>Enhance Image</h2><hr>
+    <div id="slideshow" class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 7</div>
+            <img src="soruce/10.jpg" alt="Image 1">
+            <div class="text">Afternoon in gold hour</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 7</div>
+            <img src="soruce/11.jpg" alt="Image 2">
+            <div class="text">Myth night</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 7</div>
+            <img src="soruce/13.jpg" alt="Image 3">
+            <div class="text">gold hour</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 7</div>
+            <img src="soruce/14.jpg" alt="Image 4">
+            <div class="text">Beach</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 7</div>
+            <img src="soruce/15.jpg" alt="Image 5">
+            <div class="text">Hola</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 7</div>
+            <img src="soruce/16.jpg" alt="Image 6">
+            <div class="text">source of hope</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 7</div>
+            <img src="soruce/6.jpg" alt="Image 7">
+            <div class="text">Dreaming house</div>
+        </div>
+    </div>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div><hr>  
+<h4 id="upload">Choose what you want to do</h4>
+<label for="imageUpload">Upload your image here:</label><br>
+<input type="file" id="imageUpload" accept="image/*">
+<div id="displayImageInfo"></div>
+<canvas id="imageCanvas" width="800" height="600"></canvas>
+<div class="convertButton">
+    <button onclick="applyNegative()">Negative Image</button>
+    <button onclick="applyThreshold()">Threshold</button>
+    <button onclick="applyLogarithmic()">Logarithmic Transformation</button>
+    <button onclick="applyPowerLaw()">Power Law Transformation</button>
+    <button onclick="applyBitPlaneSlicing()">Bit Plane Slicing</button>
+    <button onclick="applyHistogramEqualization()">Histogram Equalization</button>
+    <button onclick="adjustHue()">Adjust Hue</button>
+    <button onclick="compressImage()">Compress Image</button>
+</div>
+</div>
+</body>
+</html>
